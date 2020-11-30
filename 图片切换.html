@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            margin: 0 auto;
+        }
+        .img{
+            width:288px;
+            height: 384px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="app">
+        <button @click = 'changImg'>图片切换</button>
+        <div class="img">
+            <img v-bind:src=img1 alt="">
+        </div>
+    </div>
+
+    <script src="../node_modules/vue/dist/vue.js"></script>
+    <script>
+        let vn = new Vue({
+            el:'#app',
+            data:{
+                img1:"./images/OIP.jpg",
+                img2:"./images/OIP (1).jpg",
+            },
+            methods:{
+                changImg:function(){
+                    this.img1 = this.img2
+                }
+            }
+        })
+    </script>
+</body>
+</html>

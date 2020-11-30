@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+                 .navbox{
+           width: 50vw;  
+           height: 50px;  
+           display: flex;
+           line-height: 50px; 
+           text-align: center; 
+           border: 1px solid #ccc;
+        }
+        .nav{
+            flex: 1;
+            color: red;
+        } 
+    </style>
+</head>
+<body>
+    
+    <div id="app">
+        <div class="navbox">
+            <div class="nav" v-for='(item,index) in navArr' :key=item>{{item}}</div>
+            <!-- <div class="nav">{{navArr[1]}}</div>
+            <div class="nav">{{navArr[2]}}</div>
+            <div class="nav">{{navArr[3]}}</div>
+            <div class="nav">{{navArr[4]}}</div>
+            <div class="nav">{{navArr[5]}}</div>
+            <div class="nav">{{navArr[6]}}</div> -->
+        </div>
+    </div>
+</body>
+    <script src="../node_modules/vue/dist/vue.js"></script>
+    <script>
+        let vm = new Vue({
+            el:'#app',
+            data:{
+                navArr:['新闻','hao123','地图','视频','贴吧','学术','更多'],
+            },
+        })
+    </script>
+</html>

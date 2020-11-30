@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<body>
+    <div id="app">
+        <!-- 表达式 -->
+        <!-- <button v-on:click='num = num + 1'>+</button>
+        <span>{{num}}</span>
+        <button v-on:click='num = num - 1'>-</button> -->
+      
+        <!--  函数 -->
+     <!--   <button @click = 'add'>+</button>
+        <span>{{num}}</span>
+        <button @click = 'sub'>-</button> -->
+
+        <!-- 函数传参 -->
+        <button @click = 'add(1)'>+</button>
+        <span>{{num}}</span>
+        <button @click = 'sub(-1)'>-</button>
+    </div>
+
+</body>
+<script src="../node_modules/vue/dist/vue.js"></script>
+<script>
+    let vm = new Vue({
+        el:'#app',
+        data:{
+            num:123,
+        },
+        methods:{
+            add:function(step){
+                this.num = this.num +step;
+            },
+            sub:function(step){
+                this.num = this.num +step;
+            },
+        }
+    })
+</script>
+</html>
